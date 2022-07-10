@@ -38,6 +38,7 @@ const init = async () => {
 
     const contentJson = JSON.parse(String(Json));
     const contentText = String(Text)
+      .replace(/\r/g, '')
       .split('\n')
       .filter((item) => {
         return !!item;
